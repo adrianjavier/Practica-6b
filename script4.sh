@@ -8,7 +8,7 @@ numimpares=0
 while [ $i -le $max ]; do
 	valor=`cat numeros.txt | head -$i | tail -1`
 	division=`expr $valor % 2` 
-	if [ $division = 0 ]; then
+	if [ $division -eq 0 ]; then
 		pares="$pares $valor"
 		numpares=`expr $numpares + 1`
 	else
